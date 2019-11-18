@@ -23,3 +23,5 @@
 ### 引入require加载http块
 
  `var http = require('http')`
+ 
+    require是用做加载模块的，类似import

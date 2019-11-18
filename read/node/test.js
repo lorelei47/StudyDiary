@@ -1,5 +1,5 @@
 //第一个node.js---hello world
-var http = require("http");
+const http = require("http");
 http.createServer(function (request, response) {
 
     // 发送 HTTP 头部 
