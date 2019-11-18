@@ -17,3 +17,9 @@
 ### 4.node.js应用
     · npm(这也就解释使用npm前需要先安装node.js)
     · webStrom
+
+---------------------------
+## 在node.js上创建服务器
+### 引入require加载http块
+
+ `var http = require('http')`
