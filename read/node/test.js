@@ -13,3 +13,21 @@ http.createServer(function (request, response) {
 
 // 终端打印如下信息
 console.log('Server running at http://127.0.0.1:8888/');
+
+//------- 客户端发送请求 ---------//
+var http = require('http')
+http.get('http://www.example.com/', function (response) {
+    var body = [];
+
+    console.log(response.statusCode);
+    console.log(response.headers);
+
+    response.on('data', function (chunk) {
+        body.push(chunk);
+    });
+
+    response.on('end', function () {
+        body = Buffer.concat(body);
+        console.log(body.toString());
+    });
+});

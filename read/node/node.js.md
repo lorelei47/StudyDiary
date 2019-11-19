@@ -25,3 +25,16 @@
  `var http = require('http')`
  
     require是用做加载模块的，类似import
+
+## node.js连接数据库(mysql)
+
+`var mysql = require('mysql')`
+
+    需安装mysql模块 
+    npm install --save mysql
+
+## node.js异步操作
+
+## node.js文件操作
+
+## node.js网络操作
