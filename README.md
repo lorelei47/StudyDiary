@@ -15,7 +15,7 @@
 
 ### 2019-11-24 day3
 
-> > [JavaScript的基础](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/基本概念.md)
+> > [JavaScript的基础](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/js基础.md)
 > >
 > > javascript的基础知识整理。
 
