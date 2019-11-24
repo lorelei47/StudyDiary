@@ -10,11 +10,12 @@
 
 ### 2019-11-16 day2
 
->> [node.js的初步认识]()
+>> [node.js的初步认识](https://github.com/lorelei47/StudyDiary/blob/master/read/node/node.js.md)
 >> node.js是一个JavaScript的运行环境，可以理解为是一个可以解析JavaScript代码和执行JavaScript的环境，可以理解为类似解析执行class的tomcat容器.
 
 ### 2019-11-24 day3
 
-> > [JavaScript的基础]( [https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/js%E5%9F%BA%E7%A1%80.md](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/js基础.md) )
+> > [JavaScript的基础](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/基本概念.md)
 > >
 > > javascript的基础知识整理。
+
