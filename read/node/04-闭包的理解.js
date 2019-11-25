@@ -32,3 +32,15 @@ function brrFunc() {
     return brr;
 }
 console.log(brrFunc()[1]());
+
+//代码理解
+function runAsync(callback,data){
+    setTimeout(function(){
+        console.log('执行完成');
+        callback(data);
+    }, 2000);
+  }
+  var tr = "123";
+  runAsync(function(data){
+    console.log(data);
+  },tr);
