@@ -1,5 +1,6 @@
 //此js文件做常规运行作用，可随时更换代码
 
-var date = new Date("2017-1-1");
-
-console.log(date);
+var s1 = "jhhhhh"
+var s2 = s1.substring(2)
+console.log(typeof s1)
+console.log(typeof s2)
