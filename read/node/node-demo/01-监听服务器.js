@@ -1,4 +1,4 @@
-//此js文件做常规运行作用，可随时更换代码
+//node监听服务器是否正常，并发送短信提醒
 
 //引入模块
 var http = require('http');
@@ -35,38 +35,32 @@ var transporter = nodemailer.createTransport({
 
 var addcheck = true;//定义一个开关
 var timer = setInterval(function () {
-    var req = http.request(options, function () {
+    http.request(options, function () {
         //发送邮件的代码
         if (!addcheck) {
             //发送邮件的代码
             transporter.sendMail(restartOptions, function (error) {
                 //回调函数
-                if(!error){
+                if (!error) {
                     console.log("服务恢复短信发送成功");
-                }else{
+                } else {
                     console.log(error);
                 }
             })
             addcheck = true;
         }
-    });
-    //当请求网站返回错误，也就是网站不可访问时的处理代码
-    req.on('error', function () {
+    }).on('error', function () { //当请求网站返回错误，也就是网站不可访问时的处理代码
         if (addcheck) {
             transporter.sendMail(errorOptions, function (error) {
                 //回调函数
-                if(!error){
+                if (!error) {
                     console.log("服务挂掉发送成功");
-                }else{
+                } else {
                     console.log(error);
                 }
             });
             addcheck = false;
         }
-    })
-    req.end();
-    console.log((new Date()).toLocaleString()+":监听运行中...");
-},5000);
-
-
-
+    }).end();
+    console.log((new Date()).toLocaleString() + ":监听运行中...");
+}, 5000);
