@@ -10,3 +10,9 @@
 
 * #### 4.[面向对象的程序设计](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/面向对象的程序设计.md)
 
+* #### 5.[函数表达式](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/函数表达式.md)
+
+* #### 6.[BOM](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/BOM.md)
+
+* #### 7.[客户端检测](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/客户端检测.md)
+
