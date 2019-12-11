@@ -16,3 +16,9 @@
 
 * #### 7.[客户端检测](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/客户端检测.md)
 
+* #### 8.[DOM](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/DOM.md)
+
+* #### 9.[DOM扩展](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/DOM扩展.md)
+
+* #### 10.[DOM2和DOM3](https://github.com/lorelei47/StudyDiary/blob/master/read/javascript/DOM2和DOM3.md)
+
