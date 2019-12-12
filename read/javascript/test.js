@@ -1,15 +1,16 @@
 //作测试运行的js文件
 
-function Person(options){
-    this.name = options.name;
-    this.age = options.age;
-    this.showInfo = function(){
-        console.log("name:"+this.name);
-        console.log("name:"+this.age);
+var hasEnumShadowsQuirk = function(){ 
+    var o = { toString : function(){} }; 
+    var count = 0; 
+    for (var prop in o){ 
+    if (prop == "toString"){ 
+    count++; 
+    console.log(prop);
     } 
-}
+    } 
+    return count; 
+   }();
 
-var person1 = new Person({name:'joe',age:16});
-person1.showInfo();
-person1.age = 17;
-person1.showInfo();
+console.log(hasEnumShadowsQuirk);
+
