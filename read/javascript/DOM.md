@@ -91,3 +91,109 @@ open()和 close()分别用于打开和关闭网页的输出流。
 ```
 
 > **Element**类型
+
+```
+Element 类型用于表现 XML 或 HTML元素，提供了对元素标签名、子节点及特性的访问。
+nodeName属性和tagName属性均返回元素的标签名。
+--HTML元素
+
+每个元素都有一或多个特性：操作特性的DOM 方法主要有三个，分别是 getAttribute()、setAttribute()和 removeAttribute()。
+--取得特性
+getAttribute()：
+var div = document.getElementById("myDiv"); 
+alert(div.getAttribute("id")); //"myDiv" 
+alert(div.getAttribute("class")); //"bd"
+注：特性的名称是不区分大小写的，即"ID"和"id"代表的都是同一个特性。自定义特性应该加上 data-前缀以便验证。
+--设置特性
+setAttribute()设置特性，removeAttribute()移除特性（用的少）
+
+--attributes 属性
+--创建元素
+使用 document.createElement()方法可以创建新元素。这个方法只接受一个参数，即要创建元素的标签名。
+var div = document.createElement("div");
+由于新元素尚未被添加到文档树中，因此设置这些特性不会影响浏览器的显示。要把新元素添加到文档树，可以使用 appendChild()、insertBefore()或 replaceChild()方法。
+document.body.appendChild(div);
+
+--元素的子节点
+```
+
+> **Text**类型
+
+```
+文本节点由 Text 类型表示，包含的是可以照字面解释的纯文本内容。(nodeType的值为3)
+
+<!-- 没有内容，也就没有文本节点 --> 
+<div></div> 
+<!-- 有空格，因而有一个文本节点 --> 
+<div> </div> 
+<!-- 有内容，因而有一个文本节点 --> 
+<div>Hello World!</div>
+
+1.创建文本节点
+var element = document.createElement("div"); 
+element.className = "message"; 
+var textNode = document.createTextNode("Hello world!"); 
+element.appendChild(textNode); 
+document.body.appendChild(element);
+一般情况下，每个元素只有一个文本子节点。如果通过js添加多个文本子节点，那么这两个节点中的文本就会连起来显示，中间不会有空格。
+
+2.规范化文本节点
+normalize()。如果在一个包含两个或多个文本节点的父元素上调用 normalize()方法，则会将所有文本节点合并成一个节点，结果节点的 nodeValue 等于将合并前每个文本节点的 nodeValue 值拼接起来的值。
+
+3.分割文本节点
+splitText()。这个方法会将一个文本节点分成两个文本节点，即按照指定的位置分割 nodeValue 值。原来的文本节点将包含从开始到指定位置之前的内容，新文本节点将包含剩下的文本。
+```
+
+> **Comment**类型
+
+```
+注释在 DOM 中是通过 Comment 类型来表示的。(nodeType的值为8)
+```
+
+> **CDATASection**类型
+
+```
+CDATASection 类型只针对基于 XML 的文档，表示的是 CDATA 区域。(nodeType的值为4)
+```
+
+> **DocumentType**类型
+
+```
+DocumentType 包含着与文档的 doctype 有关的所有信息(nodeType的值为10)
+```
+
+> **DocumentFragment**类型
+
+```
+在所有节点类型中，只有 DocumentFragment 在文档中没有对应的标记。(nodeType的值为11)
+```
+
+> **Attr**类型
+
+```
+元素的特性在 DOM 中以 Attr 类型来表示。(nodeType的值为2)
+```
+
+
+
+#### DOM 操作技术
+
+> 动态脚本
+
+```
+使用<script>元素可以向页面中插入 JavaScript 代码，一种方式是通过其 src 特性包含外部文件，另一种方式就是用这个元素本身来包含代码。
+
+动态脚本，指的是在页面加载时不存在，但将来的某一时刻通过修改 DOM 动态添加的脚本。创建动态脚本也有两种方式：插入外部文件和直接插入 JavaScript 代码。
+```
+
+> 动态样式
+
+```
+能够把 CSS 样式包含到 HTML 页面中的元素有两个。其中，<link>元素用于包含来自外部的文件，而<style>元素用于指定嵌入的样式。
+
+加载外部样式文件的过程是异步的，也就是加载样式与执行 JavaScript 代码的过程没有固定的次序。
+```
+
+> 操作表格
+
+> 使用NodeList
