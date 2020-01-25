@@ -20,4 +20,8 @@ XHTML 的命名空间是 http://www.w3.org/1999/xhtml
 </html>
 ```
 
->  **Document** 类型的变化
+>  其他方面的变化
+
+
+
+#### 样式
